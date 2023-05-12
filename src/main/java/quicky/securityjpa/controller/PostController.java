@@ -7,12 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 import quicky.securityjpa.model.Post;
 import quicky.securityjpa.repository.PostRepository;
 
+
+
 @RestController
 @RequestMapping("/api/posts")
-public class Controller {
+public class PostController {
     private final PostRepository repository;
 
-    public Controller(PostRepository repository) {
+    public PostController(PostRepository repository) {
         this.repository = repository;
     }
     @GetMapping
