@@ -44,6 +44,7 @@ public class SecurityConfig {
         return http
                 .authorizeHttpRequests(auth->auth
                         .requestMatchers("/api/posts**").permitAll()
+                        .anyRequest().authenticated()
                 )
                 .userDetailsService(jpaUserDetailsService)
                 .headers(headers -> headers
